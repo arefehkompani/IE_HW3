@@ -6,6 +6,7 @@ import cx from 'classnames';
 export default function Keypad() {
   const handleButtonClick = (button) => {
     // TODO: handle clicking here.
+    
     console.log(button);
   };
 

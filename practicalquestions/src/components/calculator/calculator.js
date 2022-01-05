@@ -5,6 +5,10 @@ import s from './calculator.module.css';
 
 export default function Calculator() {
   // TODO: Implement calculator logic here
+  const plus = () => {
+
+  }
+  
   return (
     <div className={s.calculator}>
       <Screen />
