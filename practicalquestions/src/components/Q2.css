@@ -6,4 +6,9 @@
     padding: 10px 15px;
     margin: 10px;
     border-radius: 6px;
+    cursor: pointer;
+}
+
+.buttonsQ2:hover { 
+    background: #4faac3;
 }
