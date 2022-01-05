@@ -11,10 +11,19 @@ const Q2 = () => {
 
     const [counter, setCounter] = useState(0)
     let myInterval = useRef(null)
+
+    const cc = () => {
+        
+    }
+
     const start = () => {
         setStatuses({...statuses,status: "pause"})
-            myInterval.current = setInterval(() => {
-                setCounter(prevCount => prevCount + 1);  
+        myInterval.current = setInterval(() => {
+                if(statuses.counting=="up"){
+                    setCounter(prevCount => prevCount + 1);
+                }else{
+                    setCounter(prevCount => prevCount - 1);  
+                }
             }, 1000)
     }
 
@@ -30,13 +39,17 @@ const Q2 = () => {
     }
 
     const upcounting = () => {
-
+        setStatuses({...statuses,counting: "up"})
+        // clearInterval(myInterval.current);
+        // start()
     }
 
     const downcounting = () => {
-
+        setStatuses({...statuses,counting: "down"})
+        // clearInterval(myInterval.current);
+        // start()
     }
-    console.log(statuses);
+    // console.log(statuses);
 
     return(
         <div>
@@ -48,7 +61,11 @@ const Q2 = () => {
                 ) : (
                     <Button name="Pause" onClick={pause}/>
                 )}
-                <Button name="Up Counting"/>
+                {statuses.counting=="up" ? (
+                    <Button name="Up Counting" onClick={downcounting}/>
+                ) : (
+                    <Button name="Down Counting" onClick={upcounting}/>
+                )}
             </div>
             <div>
                 <Link
