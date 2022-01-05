@@ -18,9 +18,11 @@ const UserList = () => {
             {Object.keys(data).length==0 ? (
                 <h1>Loading...</h1>
             ) : (
-                data.map(user => {
-                    return <User phone={user.phone} email={user.email} name={user.name} website={user.website}/>
-                })
+                <div className="grid-container">
+                    {data.map(user => {
+                        return <User phone={user.phone} email={user.email} name={user.name} website={user.website}/>
+                    })}
+                </div>
             )}
         </div>
     )

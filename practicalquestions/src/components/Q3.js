@@ -7,16 +7,17 @@ const Q3 = () => {
     return(
         <div>
             <div>
-                <UserList />
+                <Link
+                className="App-link"
+                to="/"
+                >
+                Back
+                </Link>
             </div>
             <div>
-            <Link
-            className="App-link"
-            to="/"
-            >
-            Back
-            </Link>
-        </div>
+                <UserList />
+            </div>
+            
         </div>
     );
 }
