@@ -8,15 +8,16 @@ import Q4 from './components/Q4'
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes> 
-          <Route path="/" element={<Menu />}/>
-          <Route path="/Q2" element={<Q2 />}/>
-          <Route path="/Q3" element={<Q3 />}/>
-          <Route path="/Q4" element={<Q4 />}/>
-        </Routes>
-      </BrowserRouter>
-
+      <header className="App-header">
+        <BrowserRouter>
+          <Routes> 
+            <Route path="/" element={<Menu />}/>
+            <Route path="/Q2" element={<Q2 />}/>
+            <Route path="/Q3" element={<Q3 />}/>
+            <Route path="/Q4" element={<Q4 />}/>
+          </Routes>
+        </BrowserRouter>
+      </header>
     </div>
   );
 }

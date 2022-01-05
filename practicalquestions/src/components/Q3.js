@@ -1,8 +1,17 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import './Q3.css';
 
 const Q3 = () => { 
     return(
-        <div>3</div>
+        <div>
+            <Link
+            className="App-link"
+            to="/"
+            >
+            Back
+            </Link>
+        </div>
     );
 }
 

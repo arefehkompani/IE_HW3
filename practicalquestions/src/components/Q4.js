@@ -1,8 +1,17 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import './Q4.css';
 
 const Q4 = () => { 
     return(
-        <div>4</div>
+        <div>
+            <Link
+            className="App-link"
+            to="/"
+            >
+            Back
+            </Link>
+        </div>
     );
 }
 
