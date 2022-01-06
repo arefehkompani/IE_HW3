@@ -21,6 +21,13 @@ export default function Calculator() {
       setResult(parse(result));
     }else if(key== "C"){
       setResult(null)
+    }else if(key== "+/-"){
+      setResult((prev) => {
+        if(prev != null){
+          return prev * (-1)
+        }
+        return key
+      });
     }else{
       setResult((prev) => {
         if(prev != null){
