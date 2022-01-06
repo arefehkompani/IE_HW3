@@ -3,11 +3,11 @@ import s from './keypad.module.css';
 import Button from './../button/button';
 import cx from 'classnames';
 
-export default function Keypad() {
+export default function Keypad({sendPad}) {
   const handleButtonClick = (button) => {
     // TODO: handle clicking here.
-    
-    console.log(button);
+    sendPad(button)
+    // console.log(button);
   };
 
   const buttons = [
