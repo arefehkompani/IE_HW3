@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './Q2.css';
+import css from './Q2.module.css';
 
 
 const Button = (props) => { 
     return(
-        <button className="buttonsQ2" onClick={props.onClick}>
+        <button className={css.buttonsQ2} onClick={props.onClick}>
             {props.name}
         </button>
     );

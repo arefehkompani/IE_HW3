@@ -1,6 +1,5 @@
 import React,{useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
-import './Q2.css';
 import Button from "./Button";
 
 const Q2 = () => { 
@@ -11,10 +10,6 @@ const Q2 = () => {
 
     const [counter, setCounter] = useState(0)
     let myInterval = useRef(null)
-
-    const cc = () => {
-        
-    }
 
     const start = () => {
         setStatuses({...statuses,status: "pause"})
@@ -40,16 +35,11 @@ const Q2 = () => {
 
     const upcounting = () => {
         setStatuses({...statuses,counting: "up"})
-        // clearInterval(myInterval.current);
-        // start()
     }
 
     const downcounting = () => {
         setStatuses({...statuses,counting: "down"})
-        // clearInterval(myInterval.current);
-        // start()
     }
-    // console.log(statuses);
 
     return(
         <div>

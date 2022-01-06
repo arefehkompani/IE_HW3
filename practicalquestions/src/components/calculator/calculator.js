@@ -13,11 +13,19 @@ export default function Calculator() {
   // TODO: Implement calculator logic here
   const [pad, setPad] = useState(null);
   const [result, setResult] = useState(null);
+  const [flag, setFlag] = useState(false)
+
   const sendPad = (key) => {
-    // console.log(key);
     setPad(key);
+    console.log(flag);
+    if(flag){
+      setFlag(false)
+      setResult(null)
+    }
 
     if(key== "="){
+      setFlag(true)
+      console.log("in eq"+flag);
       setResult(parse(result));
     }else if(key== "C"){
       setResult(null)
