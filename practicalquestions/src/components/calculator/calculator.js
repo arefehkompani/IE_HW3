@@ -22,12 +22,25 @@ export default function Calculator() {
     }else if(key== "C"){
       setResult(null)
     }else if(key== "+/-"){
+
+      let a = /[^\d*$]\d*$/.exec(result.toString());
+      let b = result.toString().replace(/[^\d*$]\d*$/,"")
+
+      if(a==null){
+        a = /\d*$/.exec(result.toString())
+        b = null
+      }
+
+      a = a[0]*(-1)
+      if(a>0){ a = "+"+a}
+
       setResult((prev) => {
         if(prev != null){
-          return prev * (-1)
+          return b==null ? a : b+a
         }
         return key
       });
+
     }else{
       setResult((prev) => {
         if(prev != null){
