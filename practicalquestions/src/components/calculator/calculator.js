@@ -31,8 +31,8 @@ export default function Calculator() {
       setResult(null)
     }else if(key== "+/-"){
 
-      let a = /[^\d*$]\d*$/.exec(result.toString());
-      let b = result.toString().replace(/[^\d*$]\d*$/,"")
+      let a = /[^d*$x%÷]\d*$/.exec(result.toString());
+      let b = result.toString().replace(/[^d*$x%÷]\d*$/,"")
 
       if(a==null){
         a = /\d*$/.exec(result.toString())
